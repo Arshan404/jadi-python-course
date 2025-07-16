@@ -8,3 +8,7 @@ jaa_num = 3
 kol_kharje = (pizza_price * pizza_num)+(dogh_price*doghe_num)+(jaa_price * jaa_num)
 
 print(kol_kharje)
+
+nafarat = 3
+
+print(kol_kharje/nafarat)
