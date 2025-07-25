@@ -7,7 +7,7 @@ elif action =='pass':
     print('pass dad be doostesh')
 elif action == "goal" :
     print("goaaaaaal")
-    score +=1
+    score +=1        #مدل خلاصه شده score = score + 1
 else:
     print("che kardi?")
 
