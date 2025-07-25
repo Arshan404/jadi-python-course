@@ -47,13 +47,21 @@
 2
 1
 """
+while True:
+    try:
+        n = int(input("please enter a number beetwen 2 and 1000 :"))
+        if 2 <= n <= 1000:
+            break
+        else:
+            print("number must be in range!")
+    except ValueError:
+        print("please just enter the number!")
 
-
-n = int(input("enter your number:"))
 while n != 1:
-    print(n, end=' ')
-    if n % 2 == 0:
-        n = n // 2
+    print( n , end = ' ')
+    if n % 2 ==0:
+        n = n //2
     else:
         n = n * 3 + 1
 print(1)
+
