@@ -1,4 +1,4 @@
-class library:
+class Library:
     def __init__(self):
         self.books = []
 
@@ -27,5 +27,6 @@ class library:
         else:
             print("List of books: ")
             for book in self.books:
-                print(f"-{book['title']} (author : {book{'author'}})")
+                print(f"- {book['title']} (author: {book['author']})")
+
 
