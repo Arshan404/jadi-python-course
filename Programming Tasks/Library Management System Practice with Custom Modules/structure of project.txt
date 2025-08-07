@@ -1,0 +1,7 @@
+Library Management System Practice with Custom Modules/
+│
+├── main.py
+├── setup.py
+└── mylibrary/
+    ├── __init__.py
+    └── library.py
