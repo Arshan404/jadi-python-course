@@ -1,9 +1,10 @@
 #main.py
 
-from mylibrary import library
+from mylibrary.library import Library
 
 def run_libray_system():
-    lib = library()
+    lib = Library()
+
 
     while True:
         print("\n--- Library Menu ---")
@@ -24,7 +25,7 @@ def run_libray_system():
         elif choice =="3":
             title = input("Book title to search: ")
             lib.search_book(title)
-        elif choice =="4"
+        elif choice =="4":
             lib.show_books()
         elif choice =="5":
             print("Logging out.")
