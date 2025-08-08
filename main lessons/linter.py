@@ -1,3 +1,7 @@
+"""
+A program to add two numbers
+"""
+
 a = 5
 b = 8
 if a != 0:
