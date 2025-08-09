@@ -1,21 +1,18 @@
-import time
-
-def is_it_zoj():
+def run_on_zoj(f):
     import datetime
     now = datetime.datetime.now()
     minute = now.minute
-    return minute % 2 == 0
+    if minute % 2 == 0 :
+        f()
+    else:
+        print('hissss')
 
 
 def say_hello():
-    if is_it_zoj():
-        print("Hissss")
-    else:
         print("salam! man Injam ")
 
 def say_bye():
-    if is_it_zoj():
         print("bye bye!")
 
-say_hello()
-say_bye()
+run_on_zoj(say_hello)
+run_on_zoj(say_bye)
