@@ -49,3 +49,40 @@ print(match.group())  # شماره پیدا شده
 # جستجو برای الگوی +عدد+
 match3 = re.search(r'\+\d+\+', all_text)
 print(match3)
+
+print("------------------")
+
+data = """
+        "nasrin": "+91223034 1234-5678-9872-2341",
+    "bita": "+9123039 @bitabita",
+    "jadi": "+9031415 @jadijadi 6221-0610-1111-2222",
+    "sina": "9876-9383-1234-4321" 
+       """
+
+import re
+
+print(re.findall(r'\d+' , data))
+print(re.findall(r"\+\d+" , data))                     #در اوردن شماره تلفن ها
+print(re.findall(r"\d{4}-\d{4}-\d{4}-\d{4}" , data))   #در اوردن شماره کارتها
+print(re.findall(r"(\d{4})-\d{4}-\d{4}-\d{4}" , data)) # در اوردن نام بانکها چون با استفاده از 4 رقم اول امکان پذیره پس گروه بندیشون میکنیم
+matches = re.finditer(r"(\d{4})-\d{4}-\d{4}-\d{4}" , data)
+for match in matches:
+    print(matches)
+    print(match.group())                                 # هرکدوم از پرینت ها که خواستی کار کنه اون یکی دیگه هارو کامنت کن
+    print(match.group(1))                               #برخلاف پایتون که 0 اولیشه تو رجکس ها 1 یعنی اول
+
+
+print(re.search(r'\@\w+' , data))                       #بهتر اینع که یک پترن شکل بدیم
+pattern = re.compile(r'\@\w+')
+print(re.search( pattern, data))
+pattern2 = re.compile(r'\@(\w+)')
+print(re.search( pattern2, data))
+
+
+test = 'my name is @jadi_jadi in nowhere'
+print(re.search(pattern2 , test))
+
+test3 = 'my name is @jadi%jadi in nowhere'
+pattern3 = re.compile(r'\@([\w%]+)')
+print(re.search( pattern3, test3))
+
