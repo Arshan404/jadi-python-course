@@ -21,3 +21,12 @@ print(type(t[0]))
 mytitle = t[0]
 print(mytitle.getText())
 print(mytitle.get_text())       #مرسوم تره
+w = sakhtar.select('li')
+#print(w)
+print(len(w))
+for item in sakhtar.select('li'):
+    print(item.text)
+
+all_toc = sakhtar.select('.vector-toc-text')
+for toc in all_toc:
+    print(toc.text)
